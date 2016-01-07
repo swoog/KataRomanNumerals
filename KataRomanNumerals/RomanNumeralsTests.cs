@@ -21,7 +21,7 @@ namespace KataRomanNumerals
         public void Should_return_I_when_translate_1_to_roman_number()
         {
             // Arrange
-            
+
             // Act
             var romanNumber = numerals.Translate(1);
 
@@ -56,19 +56,11 @@ namespace KataRomanNumerals
 
     public class RomanNumerals
     {
+        public Dictionary<int, string> _mapRoman = new Dictionary<int, string>() { { 1, "I" }, { 2, "II" }, { 4, "IV" }, };
+
         public string Translate(int romanNumber)
         {
-            if (romanNumber == 4)
-            {
-                return "IV";
-            }
-
-            if (romanNumber == 2)
-            {
-                return "II";
-            }
-
-            return "I";
+            return _mapRoman[romanNumber];
         }
     }
 }
