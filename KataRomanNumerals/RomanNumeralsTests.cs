@@ -18,6 +18,7 @@ namespace KataRomanNumerals
         [InlineData("X", 10)]
         [InlineData("IX", 9)]
         [InlineData("XIX", 19)]
+        [InlineData("L", 50)]
         public void Should_return_roman_number_when_translate_number(string expectedRomanNumber, int number)
         {
             // Arrange
