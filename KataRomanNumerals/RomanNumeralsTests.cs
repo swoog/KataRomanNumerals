@@ -10,13 +10,6 @@ namespace KataRomanNumerals
 
     public class RomanNumeralsTests
     {
-        private RomanNumerals numerals;
-
-        public RomanNumeralsTests()
-        {
-            this.numerals = new RomanNumerals();
-        }
-
         [Theory]
         [InlineData("I", 1)]
         [InlineData("II", 2)]
@@ -25,9 +18,10 @@ namespace KataRomanNumerals
         public void Should_return_roman_number_when_translate_number(string expectedRomanNumber, int number)
         {
             // Arrange
+            var romanNumerals = new RomanNumerals();
 
             // Act
-            var romanNumber = numerals.Translate(number);
+            var romanNumber = romanNumerals.Translate(number);
 
             // Assert
             Assert.Equal(expectedRomanNumber, romanNumber);
