@@ -41,7 +41,8 @@ namespace KataRomanNumerals
             { 4, "IV" },
             { 5, "V" },
             { 9, "IX" },
-            { 10, "X" }
+            { 10, "X" },
+            { 50, "L" }
         };
 
         public string Translate(int number)
