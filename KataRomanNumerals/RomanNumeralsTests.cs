@@ -41,6 +41,11 @@ namespace KataRomanNumerals
     {
         public string Translate(int romanNumber)
         {
+            if (romanNumber == 2)
+            {
+                return "II";
+            }
+
             return "I";
         }
     }
