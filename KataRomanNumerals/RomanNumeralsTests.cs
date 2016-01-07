@@ -16,7 +16,6 @@ namespace KataRomanNumerals
         [InlineData("IV", 4)]
         [InlineData("VI", 6)]
         [InlineData("X", 10)]
-        [InlineData("IX", 19)]
         public void Should_return_roman_number_when_translate_number(string expectedRomanNumber, int number)
         {
             // Arrange
@@ -32,14 +31,7 @@ namespace KataRomanNumerals
 
     public class RomanNumerals
     {
-        private readonly Dictionary<int, string> _mapRoman = new Dictionary<int, string>
-        {
-            { 1, "I" },
-            { 2, "II" },
-            { 4, "IV" },
-            { 5, "V" },
-            { 10, "X" }
-        };
+        private readonly Dictionary<int, string> _mapRoman = new Dictionary<int, string>() { { 1, "I" }, { 2, "II" }, { 4, "IV" }, { 5, "V" }, { 10, "X" } };
 
         public string Translate(int number)
         {
