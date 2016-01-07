@@ -17,56 +17,6 @@ namespace KataRomanNumerals
             this.numerals = new RomanNumerals();
         }
 
-        [Fact]
-        public void Should_return_I_when_translate_1_to_roman_number()
-        {
-            // Arrange
-
-            // Act
-            var romanNumber = numerals.Translate(1);
-
-            // Assert
-            Assert.Equal("I", romanNumber);
-        }
-
-        [Fact]
-        public void Should_return_II_when_translate_2_to_roman_number()
-        {
-            // Arrange
-
-            // Act
-            var romanNumber = numerals.Translate(2);
-
-            // Assert
-            Assert.Equal("II", romanNumber);
-        }
-
-        [Fact]
-        public void Should_return_IV_when_translate_4_to_roman_number()
-        {
-            // Arrange
-
-            // Act
-            var romanNumber = numerals.Translate(4);
-
-            // Assert
-            Assert.Equal("IV", romanNumber);
-        }
-
-
-        [Fact]
-        public void Should_return_VI_when_translate_6_to_roman_number()
-        {
-            // Arrange
-
-            // Act
-            var romanNumber = numerals.Translate(6);
-
-            // Assert
-            Assert.Equal("VI", romanNumber);
-        }
-
-
         [Theory]
         [InlineData("I", 1)]
         [InlineData("II", 2)]
