@@ -73,9 +73,10 @@ namespace KataRomanNumerals
 
         public string Translate(int number)
         {
-            if (_mapRoman.ContainsKey(number))
+            string romanNumber;
+            if (_mapRoman.TryGetValue(number, out romanNumber))
             {
-                return _mapRoman[number];
+                return romanNumber;
             }
 
             var max = FindMaxNumberMinusThan(number);
