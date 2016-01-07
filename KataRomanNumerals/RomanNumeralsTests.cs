@@ -77,13 +77,15 @@ namespace KataRomanNumerals
             {
                 return _mapRoman[romanNumber];
             }
-            else
-            {
-                var max = _mapRoman.Keys.Where(n => n < romanNumber).Max();
-                var reduceNumber = romanNumber - max;
 
-                return Translate(max) + Translate(reduceNumber);
-            }
+            var max = FindMaxNumberMinusThan(romanNumber);
+
+            return Translate(max) + Translate(romanNumber - max);
+        }
+
+        private int FindMaxNumberMinusThan(int romanNumber)
+        {
+            return _mapRoman.Keys.Where(n => n < romanNumber).Max();
         }
     }
 }
