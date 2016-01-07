@@ -52,6 +52,19 @@ namespace KataRomanNumerals
             // Assert
             Assert.Equal("IV", romanNumber);
         }
+
+
+        [Fact]
+        public void Should_return_VI_when_translate_6_to_roman_number()
+        {
+            // Arrange
+
+            // Act
+            var romanNumber = numerals.Translate(6);
+
+            // Assert
+            Assert.Equal("VI", romanNumber);
+        }
     }
 
     public class RomanNumerals
