@@ -58,6 +58,11 @@ namespace KataRomanNumerals
     {
         public string Translate(int romanNumber)
         {
+            if (romanNumber == 4)
+            {
+                return "IV";
+            }
+
             if (romanNumber == 2)
             {
                 return "II";
