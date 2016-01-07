@@ -22,6 +22,19 @@ namespace KataRomanNumerals
             // Assert
             Assert.Equal("I", romanNumber);
         }
+
+        [Fact]
+        public void Should_return_II_when_translate_2_to_roman_number()
+        {
+            // Arrange
+            var romanNumerals = new RomanNumerals();
+
+            // Act
+            var romanNumber = romanNumerals.Translate(2);
+
+            // Assert
+            Assert.Equal("II", romanNumber);
+        }
     }
 
     public class RomanNumerals
