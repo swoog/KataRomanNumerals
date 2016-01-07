@@ -69,11 +69,21 @@ namespace KataRomanNumerals
 
     public class RomanNumerals
     {
-        public Dictionary<int, string> _mapRoman = new Dictionary<int, string>() { { 1, "I" }, { 2, "II" }, { 4, "IV" }, };
+        public Dictionary<int, string> _mapRoman = new Dictionary<int, string>() { { 1, "I" }, { 2, "II" }, { 4, "IV" }, { 5, "V" } };
 
         public string Translate(int romanNumber)
         {
-            return _mapRoman[romanNumber];
+            if (_mapRoman.ContainsKey(romanNumber))
+            {
+                return _mapRoman[romanNumber];
+            }
+            else
+            {
+                var max = _mapRoman.Keys.Where(n => n < romanNumber).Max();
+                var reduceNumber = romanNumber - max;
+
+                return Translate(max) + Translate(reduceNumber);
+            }
         }
     }
 }
