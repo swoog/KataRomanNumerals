@@ -40,6 +40,18 @@ namespace KataRomanNumerals
             // Assert
             Assert.Equal("II", romanNumber);
         }
+
+        [Fact]
+        public void Should_return_IV_when_translate_4_to_roman_number()
+        {
+            // Arrange
+
+            // Act
+            var romanNumber = numerals.Translate(4);
+
+            // Assert
+            Assert.Equal("IV", romanNumber);
+        }
     }
 
     public class RomanNumerals
