@@ -28,7 +28,7 @@ namespace KataRomanNumerals
     {
         public string Translate(int romanNumber)
         {
-            throw new NotImplementedException();
+            return "I";
         }
     }
 }
