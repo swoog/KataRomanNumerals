@@ -31,7 +31,7 @@ namespace KataRomanNumerals
 
     public class RomanNumerals
     {
-        private readonly Dictionary<int, string> _mapRoman = new Dictionary<int, string>() { { 1, "I" }, { 2, "II" }, { 4, "IV" }, { 5, "V" } };
+        private readonly Dictionary<int, string> _mapRoman = new Dictionary<int, string>() { { 1, "I" }, { 2, "II" }, { 4, "IV" }, { 5, "V" }, { 10, "X" } };
 
         public string Translate(int number)
         {
