@@ -26,7 +26,7 @@ namespace KataRomanNumerals
         [InlineData("D", 500)]
         [InlineData("CD", 400)]
         [InlineData("M", 1000)]
-        [InlineData("DM", 900)]
+        [InlineData("CM", 900)]
         [InlineData("MCMXCVIII", 1998)]
         public void Should_return_roman_number_when_translate_number(string expectedRomanNumber, int number)
         {
@@ -57,7 +57,7 @@ namespace KataRomanNumerals
             { 100, "C" },
             { 400, "CD" },
             { 500, "D" },
-            { 900, "DM" },
+            { 900, "CM" },
             { 1000, "M" }
         };
 
